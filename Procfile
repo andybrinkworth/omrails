@@ -1,1 +1,2 @@
-web: node cd omrails
+
+web: bundle exec rails server -p $PORT
