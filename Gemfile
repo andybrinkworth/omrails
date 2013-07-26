@@ -54,4 +54,4 @@ end
 
 
   gem 'bootstrap-sass', '~> 2.2.2.0'
-
+  gem 'rails_12factor', group: :production
