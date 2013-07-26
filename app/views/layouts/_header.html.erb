@@ -1,4 +1,4 @@
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
  
@@ -18,8 +18,14 @@
           <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "About", about_path %></li>
     </ul>
+    
     <ul class="nav pull-right">
-          <li><%= link_to "Login", '#' %></li>
+    <div class="btn-group">
+          <li class="active">
+          <button class="btn"><li><%= link_to "Login", '#' %></li></button>
+     
+          <button class="btn"><li><%= link_to "Register", '#' %></li></button>
+    </div>
     </ul>
       </div>
  
