@@ -10,7 +10,7 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="#">One Month Rails</a>
+      <a class="brand" href="Home">One Month Rails</a>
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
@@ -28,7 +28,7 @@
           <%else%>
           <button class="btn-info" ><li><%= link_to "Login", new_user_session_path %></li></button>
           <%end%>
-          <button class="btn-info"><li><%= link_to "Register", '#' %></li></button>
+          <button class="btn-info"><li><%= link_to "Register", new_user_registration_path %></li></button>
     </div>
     </ul>
       </div>
