@@ -10,11 +10,17 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="Home">One Month Rails</a>
- 
+      <a class="brand" <%= link_to "Home", root_path %> >One Month Rails</a>
+          <% if user_signed_in? %>
+         <p class="navbar-text pull-left">Signed in as <%= current_user.email %></p>
+         <% end %>
+        
+   <li class="divider"></li>
+
+         
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
-        <ul class="nav">
+        <ul class="nav pull-left">
           <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "About", about_path %></li>
     </ul>
@@ -23,12 +29,14 @@
     <div class="btn-group">
         <% if user_signed_in? %>
           <li class="active">
-           <button class="btn-info" ><li><%= link_to "Edit Profile", edit_user_registration_path %></li></button>
-          <button class="btn-info" ><li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li></button>
+            <button class="btn btn-default navbar-btn" ><li><%= link_to "Edit Profile", edit_user_registration_path %></li></button>
+            <button class="btn" ><li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li></button>
+          
           <%else%>
-          <button class="btn-info" ><li><%= link_to "Login", new_user_session_path %></li></button>
+          
+            <button class="btn" ><li><%= link_to "Login", new_user_session_path %></li></button>
+            <button class="btn"><li><%= link_to "Register", new_user_registration_path %></li></button>
           <%end%>
-          <button class="btn-info"><li><%= link_to "Register", new_user_registration_path %></li></button>
     </div>
     </ul>
       </div>

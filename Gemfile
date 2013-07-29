@@ -56,5 +56,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 
-  gem 'bootstrap-sass', '~> 2.2.2.0'
+  gem 'bootstrap-sass', '~> 2.3.2.1'
   gem 'rails_12factor', group: :production
