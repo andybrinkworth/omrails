@@ -17,6 +17,9 @@ end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+#Use Devise for user auth
+gem 'devise'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

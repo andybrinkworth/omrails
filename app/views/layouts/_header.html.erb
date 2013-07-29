@@ -21,9 +21,14 @@
     
     <ul class="nav pull-right">
     <div class="btn-group">
+        <% if user_signed_in? %>
           <li class="active">
-          <button class="btn"><li><%= link_to "Login", '#' %></li></button>
-          <button class="btn"><li><%= link_to "Register", '#' %></li></button>
+           <button class="btn-info" ><li><%= link_to "Edit Profile", edit_user_registration_path %></li></button>
+          <button class="btn-info" ><li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li></button>
+          <%else%>
+          <button class="btn-info" ><li><%= link_to "Login", new_user_session_path %></li></button>
+          <%end%>
+          <button class="btn-info"><li><%= link_to "Register", '#' %></li></button>
     </div>
     </ul>
       </div>
