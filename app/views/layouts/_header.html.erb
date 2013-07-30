@@ -12,10 +12,14 @@
       <!-- Be sure to leave the brand out there if you want it shown -->
       <a class="brand" <%= link_to "Home", root_path %> >One Month Rails</a>
           <% if user_signed_in? %>
-         <p class="navbar-text pull-left">Signed in as <%= current_user.email %></p>
+         <p class="navbar-text pull-left">Signed in as <%= current_user.name %></p>
+         <%else%> 
+         <p class="navbar-text strong pull-left">Please sign in or register</p>
          <% end %>
         
-   <li class="divider"></li>
+   </br>
+   </br>
+  
 
          
       <!-- Everything you want hidden at 940px or less, place within here -->

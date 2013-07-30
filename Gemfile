@@ -20,6 +20,9 @@ gem 'sass-rails', '~> 4.0.0'
 #Use Devise for user auth
 gem 'devise'
 
+#Use simple_form for form styling
+gem 'simple_form'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -58,3 +61,5 @@ end
 
   gem 'bootstrap-sass', '~> 2.3.2.1'
   gem 'rails_12factor', group: :production
+  
+  gem 'protected_attributes'
