@@ -5,6 +5,7 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
+    @pins = Pin.order("created_at desc")
     @pins = Pin.all
   end
 
@@ -75,8 +76,8 @@ class PinsController < ApplicationController
     def pin_params
       params.require(:pin).permit(:description)
     end
-end
-
 def pin_params
    params.require(:pin).permit(:description, :image)
 end
+end
+
