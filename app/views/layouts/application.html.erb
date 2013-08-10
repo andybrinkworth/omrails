@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>One Month Rails</title>
+    <title>Inspired Bride</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
     <%= csrf_meta_tags %>
     <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
   
@@ -18,11 +19,32 @@
                 <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
            
            <% end %>
+           
     <%= yield %>
 
     <%= render 'layouts/footer' %>
   
 </div>
-
+<div class="modal fade" id="loginModal">
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>Sign In</h3>
+  </div>
+  <div class="modal-body">
+    <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal'}) do |f| %>
+          <div class="inputs">
+            <%= f.input :email, :required => false, :autofocus => true %>
+            <%= f.input :password, :required => false %>
+            <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+          </div>
+  </div>
+    <div class="modal-footer">
+        <%= f.button :submit, "Sign in", :class => 'btn btn-primary', :data => { :dismiss => "modal"} %>
+        <% end %>
+    </div>
+</div>
   </body>
+  <script>
+   $('#myModal').modal('show')
+</script>
 </html>

@@ -1,10 +1,11 @@
 /* You could change the font */
-/*$baseFontFamily: Oxygen;
-@import url(http://fonts.googleapis.com/css?family=Oxygen);*/
+$baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
 
 $btnPrimaryBackground: gray;
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
+$textColour: blue;
 
 
 @import 'bootstrap';
