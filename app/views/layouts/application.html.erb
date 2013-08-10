@@ -25,26 +25,5 @@
     <%= render 'layouts/footer' %>
   
 </div>
-<div class="modal fade" id="loginModal">
-  <div class="modal-header">
-    <button class="close" data-dismiss="modal">×</button>
-    <h3>Sign In</h3>
-  </div>
-  <div class="modal-body">
-    <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal'}) do |f| %>
-          <div class="inputs">
-            <%= f.input :email, :required => false, :autofocus => true %>
-            <%= f.input :password, :required => false %>
-            <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
-          </div>
-  </div>
-    <div class="modal-footer">
-        <%= f.button :submit, "Sign in", :class => 'btn btn-primary', :data => { :dismiss => "modal"} %>
-        <% end %>
-    </div>
-</div>
-  </body>
-  <script>
-   $('#myModal').modal('show')
-</script>
+
 </html>
