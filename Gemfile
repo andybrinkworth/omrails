@@ -62,5 +62,7 @@ gem 'paperclip', github: 'thoughtbot/paperclip', branch: 'rails-4'
 
   gem 'bootstrap-sass', '~> 2.3.2.1'
   gem 'rails_12factor', group: :production
-  
+
+    gem 'aws-sdk'
+
   gem 'protected_attributes'
