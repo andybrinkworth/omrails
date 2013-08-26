@@ -1,8 +1,15 @@
 <% unless user_signed_in? %>
 <div class="center hero-unit">
     <h1>Welcome </h1>
-    <p>to The Brinkerbrooks - this is the space to securely share photos and stuff even 10,000 miles apart!</p>
+    <p>to The Brinkerbrooks - this is the space to securely share photos and stuff even when we are 10,000 miles apart!</p>
+    <p>Inspired by the name offered by Helen when Claire and Andy got married 'the Brinkerbrook' website was registered....</p>
+  
 
     <p> <%= link_to 'Sign up now!',  new_user_registration_path , class: "btn btn-large btn-primary" %> </p>
 </div>
 <% end %>
+<% if user_signed_in? %>
+<div class="center hero unit">
+    <h1>Welcome inside</h1>
+    </div>
+    <% end %>
