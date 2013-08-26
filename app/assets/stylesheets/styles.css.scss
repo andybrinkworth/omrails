@@ -1,10 +1,10 @@
 /* You could change the font */
-$baseFontFamily: Oxygen;
-@import url(http://fonts.googleapis.com/css?family=Oxygen);
+/*$baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=Oxygen);*/
 
 $btnPrimaryBackground: gray;
 $navbarBackgroundHighlight: white;
-$navbarBackground: white;
+$navbarBackground: gray;
 $textColour: blue;
 
 
@@ -23,7 +23,7 @@ body {
 
 .footer {
   margin-top: 50px;
-  color: $grayLight;
+  color: $white;
   a {
     color: $gray;
   }
