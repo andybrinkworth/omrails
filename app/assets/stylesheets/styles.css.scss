@@ -5,7 +5,7 @@
 $btnPrimaryBackground: gray;
 $navbarBackgroundHighlight: white;
 $navbarBackground: gray;
-$textColour: blue;
+$textColour: white;
 
 
 @import 'bootstrap';
@@ -54,3 +54,14 @@ body {
 .description {
     margin: 10px 0 5px;
 }
+
+.pagination { 
+    clear:both;
+}
+
+.navbar .nav > li > a {
+  float: none;
+  padding: 10px 15px 10px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 1px 0 white; }
